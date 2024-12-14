@@ -1,1 +1,0 @@
-just a history of programming languages and where C comes from
