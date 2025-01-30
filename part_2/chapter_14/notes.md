@@ -15,6 +15,7 @@
 1. pointers can store the address of the first element of an array, thereby storing the entire array
 2. dynamic allocation
    1. EX: `int *p_numbers = new int[8];`
+<<<<<<< HEAD
    2. to free: `delete [] p_numbers;`
    
 
@@ -37,3 +38,27 @@
    1. a pointer that points to an array of pointers, each pointing to a different array
 4. you cannot pass a pointer to a pointer into a function
 5. 
+=======
+   2. to free: `delete[] p_numbers;`
+
+## pointer arithmetic
+1. `x[3] = 120;` is the same as `*(x + 3) = 120;`
+
+
+### 2d arrays
+1. 2d arrays work like 1d arrays with pointer arithmetic, except more complicated
+   1. `array[3][2]` is the same as`*(array + 3 * <width of array> + 2)`
+   2. so you can only define a 2d array with the last or both indeces
+
+
+## pointers to pointers
+1. a pointer to pointer is a pointer that points to another pointer
+   1. EX: `int **p_p_x;`
+   2. must be provided a memory address
+2. we can use pointer to pointers to make 2d arrays that are distributed
+   1. instead of them being contiguous, these new 2d arrays are made up of smaller arrays
+      1. first a pointer to an array of pointers
+      2. each pointer in this array points to another array containing the "rows" of the 2d array
+3. you cant pass a double pointer to a function as if it were a 2d array
+   1. this is becuase the function is probably using code that works based on usual 2d arrays
+>>>>>>> c994bf1a3ffb5e65158fab519df2c50536c62cf8
